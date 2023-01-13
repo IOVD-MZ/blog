@@ -1,0 +1,2 @@
+# Esta pasta sera ignorada quando subir o projecto para Heroku, porque a heroku vai colocar automaticamente de acordo o so
+node_modules

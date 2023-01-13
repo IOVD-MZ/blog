@@ -1,0 +1,35 @@
+{{!-- Cabeçalho do meu projecto --}}
+<nav class="navbar  navbar-expand-lg bg-body-tertiary navbar-dark bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Blog do Node</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categorias">Categorias</a>
+        </li>
+        {{!-- user: nossa variavel global  --}}
+        {{!-- Se o user estiver logado nao mostrar se nao mostrar o menu Login e Registo --}}
+        {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link" href="/usuarios/logout">Logout</a>
+          </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/usuarios/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/usuarios/registo">Registo</a>
+        </li>
+
+        {{/if}}
+      </ul>
+       
+    </div>
+  </div>
+</nav>
